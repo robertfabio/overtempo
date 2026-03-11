@@ -1,3 +1,4 @@
+import { storage } from "../store/StorageContext";
 
 const STORAGE_KEY = "overtempo-storage";
 
@@ -10,7 +11,21 @@ const session = {
 };
 
 export const getStudySession = () => {
-    const jsonSessions = 
+  const jsonSessions = storage.getString(STORAGE_KEY);
+
+  if (jsonSessions) {
+    const sessions = JSON.parse(jsonSessions);
+    return sessions;
+  }
 }
 
 
+export const saveStudySession = (session: any) => {
+    storage.set(STORAGE_KEY, JSON.stringify(session));
+};
+
+export const addSingleSession = (newSession: any) => {
+    const currentSessions = getStudySessions();
+    currentSessions.push(newSession);
+    saveStudySessions(currentSessions);
+}

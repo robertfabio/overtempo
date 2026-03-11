@@ -1,23 +1,25 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button } from '../../components/ui/Button';
 import { ButtonSmall } from '../../components/ui/ButtonSmall';
-
+import { Card } from '../../components/ui/Card';
 
 
 export default function Home() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={styles.container}>
-          <View style={styles.container}>
+          <Card style={styles.container}>
+            <Text style={styles.text}> Bem-vindo à página inicial! </Text>
             <Text> </Text>
-            <Text> Bem-vindo à página inicial! </Text>
-            <Button title="Clique aqui" onPress={() => console.log("Botão pressionado!")} style={styles.button} />
+            <Card style={styles.card}> Conteúdo do cartão </Card>
+         
+  
               <View style={styles.rowButtons}>
                 <ButtonSmall title="Tarefas" onPress={() => console.log("Botão pressionado!")} />
                 <ButtonSmall title="Clique aqui" onPress={() => console.log("Botão pressionado!")} />
               </View>
-          </View>
+               
+          </Card>
       </ScrollView>
     </SafeAreaView>
   );
@@ -42,6 +44,18 @@ const styles = StyleSheet.create({
     marginTop: 15,
     paddingVertical: 15,
   },
+  text: {
+    fontFamily: "londrinaShadow",
+    fontSize: 32,
+    width: '110%',
+    textAlign: 'center',
+  },
+  tittle: {
+    fontFamily: "rubik",
+    fontSize: 24,
+    width: '110%',
+    marginBottom: 100,
+  },
   image: {
     width: 200,
     height: 200,
@@ -55,5 +69,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     marginTop: 20,
-  }
+  },
+  card: {
+    marginTop: 20,
+    width: '100%',
+  },
 });
