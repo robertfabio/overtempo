@@ -25,7 +25,7 @@ export const saveStudySession = (session: any) => {
 };
 
 export const addSingleSession = (newSession: any) => {
-    const currentSessions = getStudySessions();
+    const currentSessions = getStudySession();
     currentSessions.push(newSession);
-    saveStudySessions(currentSessions);
+    saveStudySession(currentSessions);
 }

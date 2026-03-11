@@ -26,8 +26,8 @@ const SPRING_CONFIG = {
 function TabIcon({ routeName, isFocused }) {
   let IconComponent;
   if (routeName === "home") IconComponent = LucideIcons.Home;
-  else if (routeName === "transactions") IconComponent = LucideIcons.DollarSign;
-  else if (routeName === "sumary") IconComponent = LucideIcons.ScrollText;
+  else if (routeName === "timer") IconComponent = LucideIcons.Hourglass;
+  else if (routeName === "analytics") IconComponent = LucideIcons.BarChart2;
   else IconComponent = LucideIcons.ShoppingBag;
 
   if (!IconComponent) {

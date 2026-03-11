@@ -10,10 +10,16 @@ export function PomodoroTimer() {
         if (intervalId) return;
         const start = Date.now() - elapsedTime;
         setStartTime(start);
-        setIntervalId(
+        setIntervalId(setInterval(() => {
+          setElapsedTime(Date.now() - startTime);
+        }, 1000));
   };
 
   const stopTimer = () => {
+    if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
   };
 
   return {

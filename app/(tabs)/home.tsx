@@ -14,10 +14,7 @@ export default function Home() {
             <Card style={styles.card}> Conteúdo do cartão </Card>
          
   
-              <View style={styles.rowButtons}>
-                <ButtonSmall title="Tarefas" onPress={() => console.log("Botão pressionado!")} />
-                <ButtonSmall title="Clique aqui" onPress={() => console.log("Botão pressionado!")} />
-              </View>
+              
                
           </Card>
       </ScrollView>
@@ -51,7 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   tittle: {
-    fontFamily: "rubik",
+    fontFamily: "ComicNeue",
     fontSize: 24,
     width: '110%',
     marginBottom: 100,
