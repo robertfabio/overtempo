@@ -21,6 +21,8 @@ export default function TabsLayout() {
             backgroundColor: Colors.light.background,
             borderBottomWidth: 2,
             borderBottomColor: Colors.light.tint,
+            padding: 32,
+            marginBottom: 16,
           },
           headerTitleAlign: "left",
           headerTintColor: Colors.light.tint,
@@ -34,9 +36,9 @@ export default function TabsLayout() {
       >
         <Tabs.Screen name="home" options={{ headerShown: false }} />
         <Tabs.Screen
-          name="transactions"
+          name="timer"
           options={{
-            title: "Transações",
+            title: "",
             headerRight: () => (
               <View style={{ flexDirection: "row", marginRight: 12 }}>
                 <Pressable
